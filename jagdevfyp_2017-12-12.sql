@@ -1,4 +1,4 @@
-# ************************************************************
+﻿# ************************************************************
 # Sequel Pro SQL dump
 # Version 4541
 #
@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.17)
 # Database: jagdevfyp
-# Generation Time: 2017-12-12 14:04:38 +0000
+# Generation Time: 2017-12-12 14:38:04 +0000
 # ************************************************************
 
 
@@ -48,21 +48,6 @@ CREATE TABLE `applicants` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `applicants` WRITE;
-/*!40000 ALTER TABLE `applicants` DISABLE KEYS */;
-
-INSERT INTO `applicants` (`id`, `appname`, `intdate`, `joi`, `dept`, `interviewer`, `inttype`, `radiostech`, `edutrain`, `workexp`, `orgskill`, `training`, `comm`, `overallrate`, `finalrec`, `created_at`, `updated_at`, `email`, `key`)
-VALUES
-	(24,'Ahmad Firhan','2017-12-27 00:00:00','2212','Finance','Aqila','Group',0,0,0,0,0,0,0,2,'2017-12-12 10:16:40','2017-12-12 10:16:40','firdaushishamuddin@gmail.com',NULL),
-	(25,'Ahmad Firhan','2017-12-26 00:00:00','2212','Finance','test','Group',0,0,0,0,0,0,0,2,'2017-12-12 10:18:28','2017-12-12 10:18:28','firdaushishamuddin@gmail.com',NULL),
-	(26,'Ahmad Firhan','2017-12-26 00:00:00','2212','Finance','Aqila','Group',0,0,0,0,0,0,0,2,'2017-12-12 10:21:01','2017-12-12 10:21:01','firdaushishamuddin@gmail.com',NULL),
-	(27,'Ahmad Firhan','2017-12-17 00:00:00','2212','Finance','Aqila','Group',3,2,2,0,3,1,11,2,'2017-12-12 10:24:10','2017-12-12 10:24:10','firdaushishamuddin@gmail.com',NULL),
-	(28,'Ahmad Firhan','2017-12-27 00:00:00','2212','Finance','Aqila','Group',0,0,0,0,0,0,0,2,'2017-12-12 10:25:02','2017-12-12 10:25:02','firdaushishamuddin@gmail.com',NULL),
-	(29,'Ahmad Firhan','2017-12-28 00:00:00','2212','IT','Aqila','Group',0,0,0,0,0,0,0,2,'2017-12-12 11:18:28','2017-12-12 11:18:28','jagdavepolis@yahoo.com',NULL),
-	(30,'Ahmad Firhan','2017-12-20 00:00:00','2212','Finance','Aqila','Group',0,0,0,0,0,0,0,2,'2017-12-12 11:21:21','2017-12-12 11:21:21','jagdavepolis@gmail.com',NULL);
-
-/*!40000 ALTER TABLE `applicants` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table employees
@@ -104,15 +89,6 @@ CREATE TABLE `employees` (
   UNIQUE KEY `employees_oin_unique` (`oin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `employees` WRITE;
-/*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-
-INSERT INTO `employees` (`id`, `fullname`, `nin`, `oin`, `epfnum`, `itn`, `itnnum`, `bank`, `accref`, `accnum`, `spfullname`, `spnin`, `spoin`, `spdob`, `spnationality`, `sppn`, `spisworking`, `spoccupation`, `spcompany`, `sppostcode`, `spotn`, `sphn`, `spmd`, `child`, `created_at`, `updated_at`)
-VALUES
-	(1,'Jagdave Singh Cheema','951205-14-5657','-','23456','SG','12345678','Public Bank Berhad','nin','234678','Aqila Binti Ahmad Nazmi','930224-14-4840','-','1993-02-24 00:00:00','Malaysian','-','Yes','Finance Officer','intel','51000','03-26947623','013-3970001','2016-03-03 00:00:00','[{\"cname\":\"Sara\",\"crel\":\"Daughter\",\"cdob\":\"2017-03-09\",\"cic\":\"234567\",\"cstatus\":\"S\"},{\"cname\":\"qwertyuiop\",\"crel\":\"son\",\"cdob\":\"2017-07-21\",\"cic\":\"123456\",\"cstatus\":\"S\"}]','2017-12-12 13:34:02','2017-12-12 13:34:02');
-
-/*!40000 ALTER TABLE `employees` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table migrations
@@ -127,19 +103,6 @@ CREATE TABLE `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `migrations` WRITE;
-/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`)
-VALUES
-	(1,'2014_10_12_000000_create_users_table',1),
-	(2,'2014_10_12_100000_create_password_resets_table',1),
-	(3,'2017_12_11_183435_create_applicants_table',2),
-	(4,'2017_12_11_191849_add_email_to_applicant',3),
-	(5,'2017_12_12_121550_create_employees_table',4);
-
-/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table password_resets
@@ -173,15 +136,6 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`)
-VALUES
-	(1,'jagdev','jagdev@jagdev.com','$2y$10$r/6zsEeNVCOsJfJrgAxPruLYw8oUf2JBdOzL.Nfe3kybasTqpiWRu','ro5vYoaDQotD6LhqBPrRziFujjuYrPYVTIFTX6PkrA1FG3Mf58454Xo9u3ZY','2017-12-11 17:58:34','2017-12-11 17:58:34');
-
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 
